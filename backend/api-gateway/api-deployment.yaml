@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-service-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-service
+  template:
+    metadata:
+      labels:
+        app: api-service
+    spec:
+      containers:
+      - name: api-service
+        image: betselot456/api-service:e239aefdcaea41dc17f245f2f6b2669fdab39d9d
+        ports:
+        - containerPort: 8000
+        env: 
+        - name: AUTH_SERVICE_URL
+          value: "auth-svc:80"
+        - name: TODO_SERVICE_URL
+          value: "todo-svc.betselot-activity.svc.cluster.local:80"
+        
+    

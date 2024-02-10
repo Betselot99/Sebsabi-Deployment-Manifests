@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-dep
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: betselot456/frontend:67700c0ee2ae3b34673dddc2722c0b02a7a3150a
+        ports:
+        - containerPort: 80
+       # env:
+       # - name: API_BASE_URL
+        #  value: "http://api.betselot.gebeyalearning.com"
