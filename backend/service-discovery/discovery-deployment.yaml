@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-service-dep
+  name: discovery-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth-service
+      app: service-discovery
   template:
     metadata:
       labels:
-        app: auth-service
+        app: service-discovery
     spec:
       containers:
-      - name: auth-service
+      - name: service-discovery
         image: betselot456/auth-service:455babd141933fca63c05cee79ca825378a605de
         ports:
-        - containerPort: 3005
+        - containerPort: 8761
         env: 
         - name: DB_HOST
           value: postgres-service

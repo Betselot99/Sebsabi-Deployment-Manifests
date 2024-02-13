@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-svc
+  name: core-svc
 spec:
   selector:
-    app: auth-service
+    app: core-service
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 3005
+      port: 9191
+      targetPort: 9191
   type: ClusterIP
