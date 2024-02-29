@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: betselot456/api-gateway:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
+        image: betselot456/api-gateway:0.0.1-SNAPSHOT-71408245
         ports:
         - containerPort: 8080
         env:
@@ -41,6 +41,6 @@ spec:
 #     spec:
 #       containers:
 #       - name: api-gateway
-#         image: betselot456/api-gateway:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
+#         image: betselot456/api-gateway:0.0.1-SNAPSHOT-71408245
 #         ports:
 #         - containerPort: 8080
