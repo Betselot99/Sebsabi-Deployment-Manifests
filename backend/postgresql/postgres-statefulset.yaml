@@ -21,8 +21,8 @@ spec:
           value: sebsabi_core
         - name: POSTGRES_USER
           value: alazar
-      # - name: PGDATA
-         # value: /var/lib/postgresql/data
+        - name: PGDATA
+          value: /data/postgres
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -41,4 +41,3 @@ spec:
       resources:
         requests:
           storage: 1Gi
- 

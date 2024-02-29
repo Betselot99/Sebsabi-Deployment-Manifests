@@ -14,13 +14,33 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: betselot456/api-service:e239aefdcaea41dc17f245f2f6b2669fdab39d9d
+        image: alazdev/api_getway:latest
         ports:
         - containerPort: 8080
-        env: 
-        - name: AUTH_SERVICE_URL
-          value: "auth-svc:80"
-        - name: TODO_SERVICE_URL
-          value: ""
-        
-    
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: docker
+        - name: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY
+          value: TRACE
+        - name: eureka.client.serviceUrl.defaultZone
+          value: http://discovery-server:8761/eureka
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: api-dep
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: api-gateway
+#   template:
+#     metadata:
+#       labels:
+#         app: api-gateway
+#     spec:
+#       containers:
+#       - name: api-gateway
+#         image: alazdev/api_getway:latest
+#         ports:
+#         - containerPort: 8080

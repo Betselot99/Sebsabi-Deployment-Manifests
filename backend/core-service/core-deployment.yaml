@@ -14,21 +14,50 @@ spec:
     spec:
       containers:
       - name: core-service
-        image: betselot456/auth-service:455babd141933fca63c05cee79ca825378a605de
+        image: alazdev/sebsabi_core_service:latest
         ports:
         - containerPort: 9191
-        env: 
-        - name: DB_HOST
-          value: postgres-service
-        - name: DB_NAME
-          value: auth_service
-        - name: DB_PORT
-          value: '5432'
-        - name: DB_USERNAME
-          value: postgres
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgres-password-secret
-              key: postgres-password
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: docker
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://postgres-core:5431/sebsabi_core
+        - name: eureka.client.serviceUrl.defaultZone
+          value: http://discovery-server:8761/eureka
+        - name: spring.kafka.bootstrap-servers
+          value: broker:29092
 
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: core-dep
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: core-service
+#   template:
+#     metadata:
+#       labels:
+#         app: core-service
+#     spec:
+#       containers:
+#       - name: core-service
+#         image: alazdev/sebsabi_core_service:latest
+#         ports:
+#         - containerPort: 9191
+#         env: 
+#         - name: DB_HOST
+#           value: postgres-service
+#         - name: DB_NAME
+#           value: auth_service
+#         - name: DB_PORT
+#           value: '5432'
+#         - name: DB_USERNAME
+#           value: postgres
+#         - name: DB_PASSWORD
+#           valueFrom:
+#             secretKeyRef:
+#               name: postgres-password-secret
+#               key: postgres-password
