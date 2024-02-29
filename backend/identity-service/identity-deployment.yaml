@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: identity-service
-        image: alazdev/identity-service:latest
+        image: betselot456/identity-service:0.0.1-SNAPSHOT-b898472
         ports:
         - containerPort: 9595
         env:

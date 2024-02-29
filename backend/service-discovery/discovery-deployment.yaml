@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: discovery-server
-        image: alazdev/service_discovery:latest
+        image: betselot456/service_discovery:0.0.1-SNAPSHOT-b898472
         ports:
         - containerPort: 8761
         env:

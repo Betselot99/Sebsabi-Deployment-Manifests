@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: alazdev/notification-service:latest
+        image: betselot456/notification-service:0.0.1-SNAPSHOT-b898472
         # ports:
         # - containerPort: <PORT> # Replace <PORT> with the port your service listens on, if applicable
         env:
