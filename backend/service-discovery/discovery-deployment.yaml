@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: discovery-server
-        image: betselot456/service_discovery:0.0.1-SNAPSHOT-b898472
+        image: betselot456/service_discovery:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
         ports:
         - containerPort: 8761
         env:
