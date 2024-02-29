@@ -21,7 +21,7 @@ spec:
         - name: SPRING_PROFILES_ACTIVE
           value: docker
         - name: SPRING_DATASOURCE_URL
-          value: jdbc:postgresql://postgres-core:5431/sebsabi_core
+          value: jdbc:postgresql://postgres-core:5432/sebsabi_core
         - name: eureka.client.serviceUrl.defaultZone
           value: http://discovery-server:8761/eureka
 
