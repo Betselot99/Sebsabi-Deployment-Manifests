@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: identity-service
-        image: betselot456/identity-service:0.0.1-SNAPSHOT-b898472
+        image: betselot456/identity-service:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
         ports:
         - containerPort: 9595
         env:
@@ -41,7 +41,7 @@ spec:
 #     spec:
 #       containers:
 #       - name: identity-service
-#         image: alazdev/identity-service:latest
+#         image: betselot456/identity-service:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
 #         ports:
 #         - containerPort: 9595
 #         env: 
