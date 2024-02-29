@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: betselot456/notification-service:0.0.1-SNAPSHOT-b898472
+        image: betselot456/notification-service:0.0.1-SNAPSHOT-""
         ports:
         - containerPort: 9000
         env:
@@ -42,7 +42,7 @@ spec:
 #     spec:
 #       containers:
 #       - name: identity-service
-#         image: betselot456/notification-service:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
+#         image: betselot456/notification-service:0.0.1-SNAPSHOT-""
 #         ports:
 #         - containerPort: 9595
 #         env: 
