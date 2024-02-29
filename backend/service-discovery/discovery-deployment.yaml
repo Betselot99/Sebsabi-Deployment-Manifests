@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: discovery-dep
+      app: discovery-server
   template:
     metadata:
       labels:
@@ -20,40 +20,5 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: docker
-
-
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: discovery-dep
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       app: service-discovery
-#   template:
-#     metadata:
-#       labels:
-#         app: service-discovery
-#     spec:
-#       containers:
-#       - name: service-discovery
-#         image: alazdev/service_discovery:latest
-#         ports:
-#         - containerPort: 8761
-#         env: 
-#         - name: DB_HOST
-#           value: postgres-service
-#         - name: DB_NAME
-#           value: auth_service
-#         - name: DB_PORT
-#           value: '5432'
-#         - name: DB_USERNAME
-#           value: postgres
-#         - name: DB_PASSWORD
-#           valueFrom:
-#             secretKeyRef:
-#               name: postgres-password-secret
-#               key: postgres-password
 
 
