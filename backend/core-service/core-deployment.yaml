@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: core-service
-        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-b898472
+        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
         ports:
         - containerPort: 9191
         env:
@@ -44,7 +44,7 @@ spec:
 #     spec:
 #       containers:
 #       - name: core-service
-#         image: alazdev/sebsabi_core_service:latest
+#         image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-$(git rev-parse --short HEAD)
 #         ports:
 #         - containerPort: 9191
 #         env: 
