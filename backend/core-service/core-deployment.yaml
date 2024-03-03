@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: core-service
-        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-""
+        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-659bf86
         ports:
         - containerPort: 9191
         env:
@@ -44,7 +44,7 @@ spec:
 #     spec:
 #       containers:
 #       - name: core-service
-#         image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-""
+#         image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-659bf86
 #         ports:
 #         - containerPort: 9191
 #         env: 
