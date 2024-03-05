@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: core-service
-        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-9719407
+        image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-038e6e9
         ports:
         - containerPort: 9191
         env:
