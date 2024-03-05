@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kafka-dep
+  name: broker
 spec:
   replicas: 1
   selector:
@@ -24,6 +24,8 @@ spec:
           value: "zookeeper:2181"
         - name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
           value: "PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT"
+        - name: KAFKA_INTER_BROKER_LISTENER_NAME
+          value: "PLAINTEXT_INTERNAL"   
         - name: KAFKA_ADVERTISED_LISTENERS
           value: "PLAINTEXT_INTERNAL://broker:29092"
         - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
@@ -32,4 +34,3 @@ spec:
           value: "1"
         - name: KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR
           value: "1"
-        
