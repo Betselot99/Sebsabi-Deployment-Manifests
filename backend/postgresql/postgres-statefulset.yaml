@@ -3,18 +3,18 @@ kind: StatefulSet
 metadata:
   name: postgres-db-sfs
 spec:
-  serviceName: postgresql
+  serviceName: postgres-core
   replicas: 1
   selector:
     matchLabels:
-      app: postgresql
+      app: postgres-core
   template:
     metadata:
       labels:
-        app: postgresql
+        app: postgres-core
     spec:
       containers:
-      - name: postgresql
+      - name: postgres-core 
         image: postgres:latest
         env:
         - name: POSTGRES_DB
