@@ -24,10 +24,11 @@ spec:
         - name: PGDATA
           value: /data/postgres
         - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgres-password-secret
-              key: postgres-password
+          value: "1524"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: postgres-password-secret
+          #     key: postgres-password
         ports:
         - containerPort: 5432
         volumeMounts:
