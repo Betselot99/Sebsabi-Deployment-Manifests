@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: core-dep
+  name: core-service
 spec:
   replicas: 1
   selector:

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: core-svc
+  name: core-service
 spec:
   selector:
     app: core-service
