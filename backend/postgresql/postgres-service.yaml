@@ -7,6 +7,6 @@ spec:
     app: postgres-core
   ports:
     - protocol: TCP
-      port: 5431
-      targetPort: 5431
+      port: 5432
+      targetPort: 5432
   type: ClusterIP
