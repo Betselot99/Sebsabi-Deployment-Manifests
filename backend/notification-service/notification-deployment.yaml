@@ -23,7 +23,7 @@ spec:
         - name: eureka.client.serviceUrl.defaultZone
           value: http://discovery-server:8761/eureka
         - name: spring.kafka.bootstrap-servers
-          value: broker:29092
+          value: http://broker:29092
         - name: MAIL_HOST
           value: "smtp.gmail.com"
         - name: MAIL_PASS

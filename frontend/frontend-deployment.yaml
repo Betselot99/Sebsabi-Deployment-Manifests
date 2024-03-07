@@ -19,4 +19,4 @@ spec:
         - containerPort: 80
         env:
         - name: API_BASE_URL
-          value: "http://api.sebsabi.gebeyalearning.com"
+          value: "http://api.sebsabi.b.gebeyalearning.com"
