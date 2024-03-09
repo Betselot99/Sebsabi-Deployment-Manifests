@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: betselot456/sebsabi-frontend:6048d4fce4ac436e8d063f44c50c06c9324fb3ba
+        image: betselot456/sebsabi-frontend:57649dab48b62d758d0f609062a9ec689f429572
         ports:
         - containerPort: 80
         env:
