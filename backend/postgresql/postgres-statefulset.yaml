@@ -15,20 +15,20 @@ spec:
     spec:
       containers:
       - name: postgres-core 
-        image: "postgres:latest"
+        image: "postgres:16"
         env:
         - name: POSTGRES_DB
           value: "sebsabi_core"
-        # - name: POSTGRES_USER
-        #   value: "alazar"
+        - name: POSTGRES_USER
+          value: "alazar"
         - name: PGDATA
           value: /data/postgres
         - name: POSTGRES_PASSWORD
           value: "1524"
-          # valueFrom:
-          #   secretKeyRef:
-          #     name: postgres-password-secret
-          #     key: postgres-password
+          valueFrom:
+            secretKeyRef:
+              name: postgres-password-secret
+              key: postgres-password
         ports:
         - containerPort: 5432
         volumeMounts:
