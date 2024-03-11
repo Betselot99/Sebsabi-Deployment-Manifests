@@ -23,8 +23,8 @@ spec:
           value: "postgres"
         - name: PGDATA
           value: /data/postgres
-        # - name: POSTGRES_PASSWORD
-        #   value: "1524"
+        - name: POSTGRES_PASSWORD
+          value: "1524"
           # valueFrom:
           #   secretKeyRef:
           #     name: postgres-password-secret

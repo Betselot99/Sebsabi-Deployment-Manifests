@@ -24,7 +24,7 @@ spec:
           value: jdbc:postgresql://postgres-core:5432/sebsabi_core
         - name: POSTGRES_USER
           value: "postgres"
-        # - name: POSTGRES_PASSWORD
-        #   value: "1524"
+        - name: POSTGRES_PASSWORD
+          value: "1524"
         - name: eureka.client.serviceUrl.defaultZone
           value: http://discovery-server:8761/eureka
