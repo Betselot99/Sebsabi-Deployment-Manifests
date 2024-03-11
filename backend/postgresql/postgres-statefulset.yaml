@@ -20,15 +20,15 @@ spec:
         - name: POSTGRES_DB
           value: "sebsabi_core"
         - name: POSTGRES_USER
-          value: "alazar"
+          value: "postgres"
         - name: PGDATA
           value: /data/postgres
-        - name: POSTGRES_PASSWORD
-          value: "1524"
-          valueFrom:
-            secretKeyRef:
-              name: postgres-password-secret
-              key: postgres-password
+        # - name: POSTGRES_PASSWORD
+        #   value: "1524"
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: postgres-password-secret
+          #     key: postgres-password
         ports:
         - containerPort: 5432
         volumeMounts:
