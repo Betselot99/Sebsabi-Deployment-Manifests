@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: example-com
+spec:
+  secretName: example-com-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - api.sebsabi.b.gebeyalearning.com
+  - sebsabi.b.gebeyalearning.com.com
