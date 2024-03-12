@@ -1,16 +1,16 @@
-# api-certificate.yaml
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  labels:
-    app.kubernetes.io/instance: sebsabi-dev
-  name: api-certificate
-  namespace: sebsabi-dev
-spec:
-  secretName: cert-certificate-tls  # Name of the secret to store the certificate
-  issuerRef:
-    name: letsencrypt-issuer  # Name of the issuer
-    kind: Issuer
-  dnsNames:
-    - api.sebsabi.b.gebeyalearning.com
-    - sebsabi.b.gebeyalearning.com.com  # DNS name for your API
+# # api-certificate.yaml
+# apiVersion: cert-manager.io/v1
+# kind: Certificate
+# metadata:
+#   labels:
+#     app.kubernetes.io/instance: sebsabi-dev
+#   name: api-certificate
+#   namespace: sebsabi-dev
+# spec:
+#   secretName: cert-certificate-tls  # Name of the secret to store the certificate
+#   issuerRef:
+#     name: letsencrypt-issuer  # Name of the issuer
+#     kind: Issuer
+#   dnsNames:
+#     - api.sebsabi.b.gebeyalearning.com
+#     - sebsabi.b.gebeyalearning.com.com  # DNS name for your API
