@@ -4,12 +4,12 @@
 # metadata:
 #   labels:
 #     app.kubernetes.io/instance: sebsabi-dev
-#   name: api-certificate
+#   name: certificate
 #   namespace: sebsabi-dev
 # spec:
-#   secretName: cert-certificate-tls  # Name of the secret to store the certificate
+#   secretName: certificate-tls  # Name of the secret to store the certificate
 #   issuerRef:
-#     name: letsencrypt-issuer  # Name of the issuer
+#     name: letsencrypt-staging  # Name of the issuer
 #     kind: Issuer
 #   dnsNames:
 #     - api.sebsabi.b.gebeyalearning.com
