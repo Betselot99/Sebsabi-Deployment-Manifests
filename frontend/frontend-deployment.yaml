@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: betselot456/sebsabi-frontend:7bf8d20571cb851f09d0fc660fc566d327dbaee5
+        image: betselot456/sebsabi-frontend:manual1
         ports:
         - containerPort: 80
         env:
         - name: API_BASE_URL
-          value: "http://api.sebsabi.b.gebeyalearning.com"
+          value: "https://api.sebsabi.b.gebeyalearning.com"
