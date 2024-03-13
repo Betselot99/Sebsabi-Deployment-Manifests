@@ -2,8 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: discovery-ingress
+  namespace: sebsabi-dev
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+      - discovery.sebsabi.b.gebeyalearning.com
+    secretName: sebsabi-tls
   rules:
   - host: discovery.sebsabi.b.gebeyalearning.com
     http:
@@ -15,3 +23,4 @@ spec:
             name: discovery-server
             port:
               number: 8761
+        
