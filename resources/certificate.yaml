@@ -13,4 +13,4 @@ spec:
     kind: Issuer
   dnsNames:
     - api.sebsabi.b.gebeyalearning.com
-    - sebsabi.b.gebeyalearning.com.com  # DNS name for your API
+    - sebsabi.b.gebeyalearning.com  # DNS name for your API
