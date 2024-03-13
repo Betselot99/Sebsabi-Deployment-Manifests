@@ -12,7 +12,7 @@ spec:
     email: betselotb2001@gmail.com
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt-issuer-account-key
     # Enable the HTTP-01 challenge provider
     solvers:
     - http01:
