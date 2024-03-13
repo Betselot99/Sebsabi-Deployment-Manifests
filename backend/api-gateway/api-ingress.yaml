@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: https://api.sebsabi.b.gebeyalearning.com
+  - host: 'api.sebsabi.b.gebeyalearning.com'
     http:
       paths:
       - path: /
