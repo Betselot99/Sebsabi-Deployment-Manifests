@@ -5,8 +5,10 @@ metadata:
 spec:
   selector:
     app: sebsabi-core-service
-  # ports:
-  #   - protocol: TCP
-  #     port: 9191
-  #     targetPort: 9191
+  ports:
+    - protocol: TCP
+      port: 0
+      targetPort: 0
   type: ClusterIP
+
+#9191

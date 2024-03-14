@@ -15,8 +15,8 @@ spec:
       containers:
       - name: sebsabi-core-service
         image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-038e6e9
-        # ports:
-        # - containerPort: 9191
+        ports:
+        - containerPort: 0
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: docker
