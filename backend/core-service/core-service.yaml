@@ -7,8 +7,8 @@ spec:
     app: sebsabi-core-service
   ports:
     - protocol: TCP
-      port: 0
-      targetPort: 0
+      port: 9191
+      targetPort: 9191
   type: ClusterIP
 
 #9191

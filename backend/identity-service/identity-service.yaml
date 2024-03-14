@@ -7,8 +7,8 @@ spec:
     app: identity-service
   ports:
     - protocol: TCP
-      port: 0
-      targetPort: 0
+      port: 9595
+      targetPort: 9595
   type: ClusterIP
 
 #9595
