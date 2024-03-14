@@ -3,10 +3,10 @@
 # metadata:
 #   labels:
 #     app.kubernetes.io/instance: sebsabi-dev
-#   name: sesbai-cert
+#   name: sesbai-dev-cert
 #   namespace: sebsabi-dev
 # spec:
-#   secretName: sebsabi-tls  # Name of the secret to store the certificate
+#   secretName: sebsabi-dev-tls  # Name of the secret to store the certificate
 #   issuerRef:
 #     name: letsencrypt-prod  # Name of the issuer
 #     kind: Issuer

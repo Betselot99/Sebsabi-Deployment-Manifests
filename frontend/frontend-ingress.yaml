@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
       - sebsabi.b.gebeyalearning.com
-    secretName: sebsabi-tls
+    secretName: sebsabi-dev-tls
   rules:
   - host: sebsabi.b.gebeyalearning.com
     http:
