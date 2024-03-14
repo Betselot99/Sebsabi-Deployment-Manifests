@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: identity-service
-  ports:
-    - protocol: TCP
-      port: 9595
-      targetPort: 9595
+  # ports:
+  #   - protocol: TCP
+  #     port: 9595
+  #     targetPort: 9595
   type: ClusterIP

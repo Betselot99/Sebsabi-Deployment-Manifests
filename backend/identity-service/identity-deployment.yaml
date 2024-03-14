@@ -15,8 +15,8 @@ spec:
       containers:
       - name: identity-service
         image: betselot456/identity-service:0.0.1-SNAPSHOT-038e6e9
-        ports:
-        - containerPort: 9595
+        # ports:
+        # - containerPort: 9595
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: docker
