@@ -1,0 +1,14 @@
+# apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  # labels:
+  #   app.kubernetes.io/instance: sebsabi-dev
+  name: api-tls
+  namespace: sebsabi-dev
+spec:
+  secretName: api-tls-secret  # Name of the secret to store the certificate
+  issuerRef:
+    name: letsencrypt-prod  # Name of the issuer
+    kind: Issuer
+  dnsNames:
+    - api.sebsabi.b.gebeyalearning.com

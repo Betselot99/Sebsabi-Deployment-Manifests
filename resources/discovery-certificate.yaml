@@ -1,0 +1,13 @@
+kind: Certificate
+metadata:
+  # labels:
+  #   app.kubernetes.io/instance: sebsabi-dev
+  name: discovery-tls
+  namespace: sebsabi-dev
+spec:
+  secretName: discovery-tls-secret  # Name of the secret to store the certificate
+  issuerRef:
+    name: letsencrypt-prod  # Name of the issuer
+    kind: Issuer
+  dnsNames:
+    - discovery.sebsabi.b.gebeyalearning.com
