@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: core-service
+  name: sebsabi-core-service
 spec:
   selector:
-    app: core-service
+    app: sebsabi-core-service
   ports:
     - protocol: TCP
       port: 9191

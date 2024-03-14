@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: core-service
+      app: sebsabi-core-service
   template:
     metadata:
       labels:
-        app: core-service
+        app: sebsabi-core-service
     spec:
       containers:
-      - name: core-service
+      - name: sebsabi-core-service
         image: betselot456/sebsabi_core_service:0.0.1-SNAPSHOT-038e6e9
         ports:
         - containerPort: 9191
