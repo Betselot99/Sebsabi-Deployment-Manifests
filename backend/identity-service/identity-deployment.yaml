@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: identity-service
-        image: betselot456/identity-service:0.0.1-SNAPSHOT-8540008
+        image: betselot456/identity-service:0.0.1-SNAPSHOT-1ff78e8
         ports:
         - containerPort: 9595
         env:
