@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: betselot456/api-gateway:0.0.1-SNAPSHOT-764b749
+        image: betselot456/api-gateway:0.0.1-SNAPSHOT-dcef132
         ports:
         - containerPort: 8080
         env:
