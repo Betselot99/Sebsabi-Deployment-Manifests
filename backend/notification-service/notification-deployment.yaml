@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: betselot456/notification-service:0.0.1-SNAPSHOT-6fe21b6
+        image: betselot456/notification-service:0.0.1-SNAPSHOT-8962b20
         ports:
         - containerPort: 9000
         env:
